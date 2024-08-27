@@ -9,6 +9,15 @@ import { CfnOutput } from "aws-cdk-lib";
 
 dotenv.config();
 
+/**
+ * Represents the properties required to add a custom domain to a REST API.
+ * @interface ApplyRestApiCustomDomainProps
+ * @property {Construct} scope The scope of the construct.
+ * @property {RestApi} restApi The REST API to which the custom domain will be added.
+ * @property {string} hostedZone The hosted zone of the domain.
+ * @property {string} domainName The domain name to be added to the REST API.
+ * @property {string} certificateArn The ARN of the certificate to be used for the custom domain.
+ */
 export interface ApplyRestApiCustomDomainProps {
   scope: Construct; // The scope of the construct.
   restApi: RestApi; // The REST API to which the custom domain will be added.
