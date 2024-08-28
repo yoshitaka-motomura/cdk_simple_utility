@@ -4,8 +4,7 @@ import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 def lambda_handler(event, context):
-    logger.info('## ENVIRONMENT VARIABLES')
-    logger.info(event)
+    logger.log(logging.INFO, 'Hello from Lambda!')
     return {
         'statusCode': 200,
         'body': json.dumps({
